@@ -1,0 +1,28 @@
+{
+  "name": "lzw-compressor",
+  "type": "module",
+  "version": "21.6.1",
+  "description": "LZW compressor module from Glize library.",
+  "homepage": "https://glize.js.org",
+  "repository": "github:Datamart/lzw-compressor",
+  "license": "Apache-2.0",
+  "main": "./index.js",
+  "exports": "./index.js",
+  "scripts": {
+    "test": "node ./index.tests.js"
+  },
+  "bugs": {
+    "url": "https://github.com/Datamart/lzw-compressor/issues"
+  },
+  "author": {
+    "name": "Valentin Podkamennyi",
+    "email": "valentin@dtm.io",
+    "url": "https://vpodk.com/"
+  },
+  "keywords": [
+    "lzw-compressor",
+    "lzw-compress",
+    "lzw",
+    "glize"
+  ]
+}
