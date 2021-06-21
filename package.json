@@ -1,7 +1,7 @@
 {
   "name": "lzw-compressor",
   "type": "module",
-  "version": "21.6.1",
+  "version": "21.6.2",
   "description": "LZW compressor module from Glize library.",
   "homepage": "https://glize.js.org",
   "repository": "github:Datamart/lzw-compressor",

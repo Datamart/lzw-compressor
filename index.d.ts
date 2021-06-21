@@ -5,17 +5,11 @@
  * @param {string} str Data to compress.
  * @return {string} Returns compressed data.
  */
-declare function compress(str: string): string;
-
-// Exposed public method.
-export default compress;
+export declare function compress(str: string): string;
 
 /**
  * Decompress data string compressed with the LZW algorithm.
  * @param {string} str Data to compress.
  * @return {string} Returns compressed data.
  */
-declare function decompress(str: string): string;
-
-// Exposed public method.
-export default decompress;
+export declare function decompress(str: string): string;
