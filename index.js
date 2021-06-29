@@ -8,6 +8,7 @@
  * @module lzw-compressor
  */
 
+import { uint32 } from 'uint';
 
 /**
  * Compress data string using LZW lossless data compression algorithm.
@@ -38,7 +39,9 @@ export const compress = (str) => {
     }
   }
   out.push(phrase.length > 1 ? dict[phrase] : phrase.charCodeAt(0));
-  for (let i = 0; i < out.length; i++) {
+
+  const length = uint32(out.length);
+  for (let i = 0; i < length; ++i) {
     out[i] = String.fromCharCode(/** @type {number} */ (out[i]));
   }
 
@@ -59,11 +62,13 @@ export const decompress = (str) => {
   const dict = {};
   const data = str.split('');
   const out = [data.shift()];
+  const length = uint32(data.length);
+
   let code = 256;
   let chr = out[0];
   let tmp = chr;
 
-  for (let i = 0; i < data.length; i++) {
+  for (let i = 0; i < length; ++i) {
     const next = data[i].charCodeAt(0);
     const phrase = next < 256 ? 
         data[i] : 
